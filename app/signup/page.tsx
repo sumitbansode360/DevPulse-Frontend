@@ -93,7 +93,7 @@ export default function SignupPage() {
     setIsLoading(true);
     setErrors({});
     try{
-      const res = await axios.post("http://127.0.0.1:8000/api/users/register/", 
+      const res = await axios.post("https://devpulsebackend.pythonanywhere.com/api/users/register/", 
         formData
       )
       const data = await res.data;
