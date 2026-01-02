@@ -35,6 +35,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 // Menu items.
 const items = [
@@ -75,6 +76,12 @@ export function AppSidebar() {
       if (!token) return
       setAuthToken(token) 
   }, [])
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/";
+  };
 
   return (
     <Sidebar collapsible="icon">
@@ -123,7 +130,10 @@ export function AppSidebar() {
                       {authToken ? (
                         <SidebarMenuSubItem>
                           <SidebarMenuSubButton asChild>
-                            <Link href="/logout"><LogOut/>Logout</Link>
+                            <Button 
+                              onClick={handleLogout}
+                              className="cursor-pointer w-30 h-10" 
+                              variant="ghost"><LogOut/>Logout</Button>
                           </SidebarMenuSubButton>
                         </SidebarMenuSubItem>
                       ) : (

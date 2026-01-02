@@ -15,7 +15,8 @@ export default function ConditionalLayout({
   const hideSidebar =
     pathname === "/" ||
     pathname.startsWith("/reset-password") ||
-    pathname.startsWith("/forgot-password")
+    pathname.startsWith("/forgot-password") ||
+    pathname.startsWith("/signup");
 
   if (hideSidebar) {
 
