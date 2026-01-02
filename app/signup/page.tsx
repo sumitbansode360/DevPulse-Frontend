@@ -110,6 +110,7 @@ export default function SignupPage() {
       const data = await res.data;
       console.log(data);
       if(res.status==201){
+        toast.success("Account created successfully!")
         router.push('/') //login
       }
     }catch (error: any){
