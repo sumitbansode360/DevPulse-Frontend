@@ -163,7 +163,7 @@ const fetchTopicsLogs = useCallback(async () => {
 
         {/* Summary Footer */}
         {logs.length > 0 && (
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-8">
             <div>
               <h3 className="text-lg font-semibold mb-1">Learning Progress</h3>
               <p className="text-sm text-muted-foreground">

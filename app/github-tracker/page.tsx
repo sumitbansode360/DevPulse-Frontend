@@ -257,7 +257,7 @@ export default function GitHubTracker() {
       console.log(result);
       setData(result);
     } catch {
-      setError("Failed to fetch GitHub data");
+      setError("Failed to fetch GitHub data, Check username and try again.");
     } finally {
       setIsLoading(false);
     }
